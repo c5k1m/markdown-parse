@@ -16,16 +16,28 @@ public class MarkdownParse {
             int openParen = markdown.indexOf("(", nextCloseBracket);
             int closeParen = markdown.indexOf(")", openParen);
 
+<<<<<<< HEAD
             if (nextOpenBracket == -1) {
+=======
+            //checks for infinite looping
+>>>>>>> 2ddf26f76403e0baa1789d5d0956e6c735c8d0d9
             if (nextOpenBracket == -1 || nextCloseBracket == -1 || openParen == -1 || closeParen == -1) {
                 break;
             }
 
+<<<<<<< HEAD
             int nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
             int openParen = markdown.indexOf("(", nextCloseBracket);
             int closeParen = markdown.indexOf(")", openParen);
             toReturn.add(markdown.substring(openParen + 1, closeParen));
 
+=======
+            //checks for brackets and parentheses with stuff between them, and empty links
+            if (nextCloseBracket + 1 == openParen && openParen + 1 != closeParen) {
+                toReturn.add(markdown.substring(openParen + 1, closeParen));
+            }
+            
+>>>>>>> 2ddf26f76403e0baa1789d5d0956e6c735c8d0d9
             currentIndex = closeParen + 1;
 
             //System.out.println(currentIndex + " " + markdown.charAt(currentIndex-1));
