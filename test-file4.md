@@ -1,7 +1,12 @@
-# title
+[](a link on the first line)
+[]()
 
-<<<<<<< HEAD
-[]link goes here!
-=======
-[]link goes here!
->>>>>>> 2ddf26f76403e0baa1789d5d0956e6c735c8d0d9
+beep
+
+[linkname]oh (wow)
+
+boop 
+
+[link number 2] (doot)
+
+hello
