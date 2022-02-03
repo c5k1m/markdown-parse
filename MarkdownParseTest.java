@@ -1,22 +1,16 @@
 import static org.junit.Assert.*;
-<<<<<<< HEAD
-=======
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
->>>>>>> 2ddf26f76403e0baa1789d5d0956e6c735c8d0d9
 import org.junit.*;
 
 public class MarkdownParseTest {
     @Test
     public void addition() {
-<<<<<<< HEAD
-        assertEquals(2, 1 + 1); // runs a check to see if right code equals to the contents of left code
-    }
-=======
         assertEquals(2, 1 + 1);
     }
 
@@ -32,11 +26,11 @@ public class MarkdownParseTest {
 
         filename = Path.of("test-file3.md");
         contents = Files.readString(filename);
-        assertEquals(MarkdownParse.getLinks(contents), List.of("https://something.com", "some-page.html"));
+        assertEquals(MarkdownParse.getLinks(contents), List.of());
 
         filename = Path.of("test-file4.md");
         contents = Files.readString(filename);
-        assertEquals(MarkdownParse.getLinks(contents), List.of("https://something.com", "some-page.html"));
+        assertEquals(MarkdownParse.getLinks(contents), List.of("a link on the first line"));
     }
 
     /*
@@ -53,5 +47,4 @@ public class MarkdownParseTest {
         assertEquals(false, exceptionThrown);
     }
     */
->>>>>>> 2ddf26f76403e0baa1789d5d0956e6c735c8d0d9
 }
